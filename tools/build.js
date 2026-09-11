@@ -28,6 +28,7 @@ function parseDuration(str) {
 
 // 簡單的 RFC4180 風格 CSV 解析（支援雙引號欄位與逸出的 ""）
 function parseCSV(text) {
+  if (text.charCodeAt(0) === 0xfeff) text = text.slice(1); // 去掉 UTF-8 BOM（Excel 存檔常見）
   const rows = [];
   let row = [];
   let field = "";

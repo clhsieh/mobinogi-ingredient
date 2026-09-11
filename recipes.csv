@@ -1,4 +1,4 @@
-name,category,subcategory,craft_time_sec,output_qty,materials
+﻿name,category,subcategory,craft_time_sec,output_qty,materials
 鐵錠,材料,金屬,30,3,礦石:20
 鐵錠,材料,金屬,30,3,鐵礦石:10
 鋼錠,材料,金屬,5分,3,鐵錠:3;煤炭:4
