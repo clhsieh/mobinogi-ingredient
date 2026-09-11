@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瑪奇 MOBILE 製作計算機</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>瑪奇 MOBILE 製作計算機</h1>
+    <p class="subtitle">點選製作物，展開所需材料與製作時間</p>
+    <label class="membership-toggle">
+      <input type="checkbox" id="premium-toggle" checked />
+      <span class="switch"></span>
+      奇幻生活會員（資料預設為會員時間；取消勾選則製作時間 ×2）
+    </label>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <input id="search-input" class="search-input" type="text" placeholder="搜尋製作物…" />
+      <div id="category-tabs" class="tabs"></div>
+      <div id="subcategory-tabs" class="tabs tabs-sub"></div>
+      <ul id="item-list" class="item-list"></ul>
+    </aside>
+
+    <section class="detail">
+      <p id="detail-empty" class="empty-hint">← 從左側選擇一個製作物開始</p>
+
+      <div id="detail-content" hidden>
+        <div class="detail-head">
+          <h2 id="detail-title"></h2>
+          <div class="qty-control">
+            <label for="qty-input">數量</label>
+            <button id="qty-decrease" type="button">−</button>
+            <input id="qty-input" type="number" min="1" value="1" />
+            <button id="qty-increase" type="button">＋</button>
+          </div>
+        </div>
+
+        <div class="summary-cards">
+          <div class="card">
+            <div class="card-label">總製作時間</div>
+            <div id="total-time" class="card-value"></div>
+          </div>
+          <div class="card">
+            <div class="card-label">總製作次數</div>
+            <div id="total-actions" class="card-value"></div>
+          </div>
+        </div>
+        <p class="note">
+          總製作時間為所有製作步驟依序進行的估計（未考慮多工作站同時製作、加速道具等因素）。
+        </p>
+
+        <div id="recipe-choices" class="recipe-choices" hidden></div>
+
+        <div class="panels">
+          <div class="panel">
+            <h3>展開配方樹</h3>
+            <ul id="tree" class="tree"></ul>
+          </div>
+
+          <div class="panel">
+            <h3>建議製作順序</h3>
+            <ol id="craft-steps" class="craft-steps"></ol>
+
+            <h3>所需原始材料總表</h3>
+            <table id="materials-table">
+              <thead>
+                <tr><th>材料</th><th>數量</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      配方資料維護於 <code>data.js</code>，可自行編輯新增／修正。
+      本站為靜態網頁，可直接開啟 <code>index.html</code> 或部署至 GitHub Pages。
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

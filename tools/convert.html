@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>配方 CSV → data.js 轉換工具</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f5f0; --panel: #ffffff; --text: #2a2420;
+      --muted: #7a7168; --border: #e3ddd2; --accent: #a15c2b;
+      --err: #c0392b; --warn: #a1782b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1b1815; --panel:#24201c; --text:#ece6dc; --muted:#a89d8e; --border:#3a342c; --accent:#e0a96d; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px; background: var(--bg); color: var(--text);
+      font-family: -apple-system,"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    }
+    h1 { font-size: 1.3rem; margin: 0 0 6px; }
+    p.desc { color: var(--muted); margin: 0 0 18px; font-size: 0.9rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .panel h2 { font-size: 1rem; margin: 0 0 10px; }
+    textarea {
+      width: 100%; height: 320px; font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 0.82rem; padding: 10px; border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg); color: var(--text); resize: vertical;
+    }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; align-items: center; }
+    button, .file-btn {
+      border: 1px solid var(--border); background: var(--panel); color: var(--text);
+      padding: 7px 14px; border-radius: 8px; cursor: pointer; font-size: 0.88rem;
+    }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    input[type="file"] { display: none; }
+    .messages { margin-top: 10px; font-size: 0.85rem; }
+    .messages .err { color: var(--err); }
+    .messages .warn { color: var(--warn); }
+    .messages .ok { color: #2e7d32; }
+    footer { color: var(--muted); font-size: 0.8rem; margin-top: 20px; }
+    code { background: rgba(161,92,43,0.12); padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>配方 CSV → data.js 轉換工具</h1>
+  <p class="desc">
+    以後要更新配方，只要編輯 <code>recipes.csv</code>（可用 Excel / Numbers / Google
+    試算表打開），再用這個工具轉換成 <code>data.js</code>，取代專案裡的檔案即可。
+    這個頁面完全在瀏覽器內運算，不會上傳任何資料。
+  </p>
+
+  <div class="controls">
+    <label class="file-btn">
+      匯入 CSV 檔案
+      <input type="file" id="file-input" accept=".csv,text/csv" />
+    </label>
+    <button id="load-sample">載入範例 CSV</button>
+    <button id="convert-btn" class="primary">轉換 → 產生 data.js</button>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>1. CSV 內容（可直接貼上／編輯）</h2>
+      <textarea id="csv-input" spellcheck="false" placeholder="name,category,subcategory,craft_time_sec,output_qty,materials"></textarea>
+      <p class="desc" style="margin-top:8px;">
+        欄位說明（不需要另外想英文 id，直接用物品名稱就好）：<br />
+        <code>name</code> 物品名稱，同時當作唯一代碼，其他配方用這個名稱引用<br />
+        <code>category</code> 大分類（自由命名，會顯示在左側第一層篩選 tab）<br />
+        <code>subcategory</code> 小分類（自由命名，選填；同一大分類下若有填，
+        會多顯示第二層篩選 tab，留空就沒有第二層）<br />
+        <code>craft_time_sec</code> 每次製作時間，可以直接寫秒數（例如 <code>100</code>），
+        也可以寫 <code>1小時40分</code>、<code>90秒</code>、<code>2分30秒</code> 這種格式，
+        會自動換算成秒數<br />
+        <code>output_qty</code> 每次產出數量
+        —— 這兩欄「原始材料」留空即可<br />
+        <code>materials</code> 所需材料，格式 <code>材料名稱:數量</code>，多個材料用
+        <code>;</code> 分隔，例如 <code>鐵礦石:3;木材:1</code><br />
+        （物品名稱本身請避免包含 <code>:</code>、<code>;</code>、<code>,</code> 這幾個符號，以免跟格式衝突）
+      </p>
+      <p class="desc">
+        <strong>不需要列出原始材料：</strong>只要某個材料名稱從來沒有出現在
+        <code>name</code> 欄，網站會自動把它當成「直接採集」的原始材料，不用特地加一列。<br />
+        <strong>同一物品可以有多種配方：</strong>用同一個 <code>name</code>
+        寫好幾列，每一列填不同的 <code>materials</code>（分類/時間/產出可以只填第一列，
+        其餘留空），網站會讓使用者自己選要用哪一種配方來計算。
+      </p>
+    </div>
+
+    <div class="panel">
+      <h2>2. 產生的 data.js</h2>
+      <textarea id="js-output" spellcheck="false" readonly placeholder="按左上「轉換」按鈕產生內容…"></textarea>
+      <div class="controls">
+        <button id="copy-btn">複製內容</button>
+        <button id="download-btn">下載 data.js</button>
+      </div>
+      <div id="messages" class="messages"></div>
+    </div>
+  </div>
+
+  <footer>
+    產生後請把下載的 <code>data.js</code> 覆蓋到專案根目錄，重新整理
+    <code>index.html</code> 即可看到更新後的配方。<br />
+    如果本機有裝 Node.js，也可以不用這個頁面，直接在專案根目錄執行
+    <code>node tools/build.js</code>，會自動讀 <code>recipes.csv</code>
+    並覆蓋 <code>data.js</code>，不用手動下載/搬移檔案。
+  </footer>
+
+  <script>
+    const SAMPLE_CSV = `name,category,subcategory,craft_time_sec,output_qty,materials
+鐵錠,材料,金屬,60,3,礦石:20
+鐵錠,材料,金屬,60,3,鐵礦石:10
+鋼錠,材料,金屬,600,3,鐵錠:3;煤炭:4
+合金鋼錠,材料,金屬,2小時40分,3,鋼錠:3;銅礦石:15;煤炭:8
+特殊鋼錠,材料,金屬,8小時,3,合金鋼錠:3;白銅礦石:20;煤炭:12
+銀合金錠,材料,金屬,10小時,3,特殊鋼錠:5;銀礦石:20;煤炭:16
+`;
+
+    const csvInput = document.getElementById("csv-input");
+    const jsOutput = document.getElementById("js-output");
+    const messagesEl = document.getElementById("messages");
+    const fileInput = document.getElementById("file-input");
+
+    document.getElementById("load-sample").addEventListener("click", () => {
+      csvInput.value = SAMPLE_CSV;
+    });
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => { csvInput.value = reader.result; };
+      reader.readAsText(file, "utf-8");
+    });
+
+    // 允許 craft_time_sec 直接寫「1小時40分」這種格式，自動換算成秒數。
+    function parseDuration(str) {
+      if (/^\d+(\.\d+)?$/.test(str)) return Number(str);
+      const hourMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:小時|時|hr|h)/i);
+      const minMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:分鐘|分|min|m)/i);
+      const secMatch = str.match(/(\d+(?:\.\d+)?)\s*(?:秒|sec|s)/i);
+      let total = 0;
+      let matched = false;
+      if (hourMatch) { total += parseFloat(hourMatch[1]) * 3600; matched = true; }
+      if (minMatch) { total += parseFloat(minMatch[1]) * 60; matched = true; }
+      if (secMatch) { total += parseFloat(secMatch[1]); matched = true; }
+      return matched ? total : NaN;
+    }
+
+    // 簡單的 RFC4180 風格 CSV 解析（支援雙引號欄位與逸出的 ""）
+    function parseCSV(text) {
+      const rows = [];
+      let row = [];
+      let field = "";
+      let inQuotes = false;
+      for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (inQuotes) {
+          if (c === '"') {
+            if (text[i + 1] === '"') { field += '"'; i++; }
+            else inQuotes = false;
+          } else {
+            field += c;
+          }
+        } else if (c === '"') {
+          inQuotes = true;
+        } else if (c === ",") {
+          row.push(field); field = "";
+        } else if (c === "\n" || c === "\r") {
+          if (c === "\r" && text[i + 1] === "\n") i++;
+          row.push(field); field = "";
+          if (!(row.length === 1 && row[0] === "")) rows.push(row);
+          row = [];
+        } else {
+          field += c;
+        }
+      }
+      if (field.length > 0 || row.length > 0) { row.push(field); rows.push(row); }
+      return rows;
+    }
+
+    function convert() {
+      const messages = [];
+      const raw = parseCSV(csvInput.value);
+      if (raw.length === 0) {
+        messagesEl.innerHTML = `<div class="err">找不到任何資料，請先貼上或匯入 CSV。</div>`;
+        return;
+      }
+
+      const header = raw[0].map((h) => h.trim().toLowerCase());
+      const required = ["name", "category", "craft_time_sec", "output_qty", "materials"];
+      const missing = required.filter((h) => !header.includes(h));
+      if (missing.length > 0) {
+        messagesEl.innerHTML = `<div class="err">CSV 缺少欄位：${missing.join(", ")}</div>`;
+        return;
+      }
+      const col = Object.fromEntries(header.map((h, idx) => [h, idx]));
+
+      // 先依 name 分組，同一個 name 出現多次 = 同一物品的多種配方
+      const groups = new Map(); // name -> { category, subcategory, recipes: [], rawRow: bool }
+      let hasBlockingError = false;
+      const order = []; // 保留第一次出現的順序
+
+      raw.slice(1).forEach((r, rowIdx) => {
+        if (r.every((cell) => cell.trim() === "")) return; // 略過空白行
+        const lineNo = rowIdx + 2; // +1 跳過標題列、+1 轉成 1-based
+        const get = (col_name) => (r[col[col_name]] ?? "").trim();
+
+        const name = get("name");
+        const category = get("category");
+        const subcategory = col.subcategory !== undefined ? get("subcategory") : "";
+        const craftTimeStr = get("craft_time_sec");
+        const outputQtyStr = get("output_qty");
+        const materialsStr = get("materials");
+
+        if (!name) { messages.push({ type: "err", text: `第 ${lineNo} 行缺少 name，已略過` }); hasBlockingError = true; return; }
+
+        if (!groups.has(name)) {
+          groups.set(name, { category: "", subcategory: "", recipes: [] });
+          order.push(name);
+        }
+        const group = groups.get(name);
+        if (category && group.category && group.category !== category) {
+          messages.push({ type: "warn", text: `${name} 的 category 在不同列不一致（「${group.category}」與「${category}」），採用第一次出現的值` });
+        }
+        if (category && !group.category) group.category = category;
+        if (subcategory && !group.subcategory) group.subcategory = subcategory;
+
+        if (materialsStr === "") return; // 這一列沒有 materials，代表只是宣告分類、不是一筆配方
+
+        if (craftTimeStr === "") {
+          messages.push({ type: "err", text: `${name} 第 ${lineNo} 行有 materials 卻沒填 craft_time_sec` });
+          hasBlockingError = true;
+          return;
+        }
+        const craftTime = parseDuration(craftTimeStr);
+        if (Number.isNaN(craftTime)) {
+          messages.push({ type: "err", text: `${name} 的 craft_time_sec「${craftTimeStr}」看不懂時間格式，請填秒數或像「1小時40分」這樣的格式` });
+          hasBlockingError = true;
+          return;
+        }
+
+        let outputQty = 1;
+        if (outputQtyStr !== "") {
+          const n = Number(outputQtyStr);
+          if (Number.isNaN(n)) { messages.push({ type: "err", text: `${name} 的 output_qty「${outputQtyStr}」不是數字` }); hasBlockingError = true; return; }
+          outputQty = n;
+        }
+
+        const materials = materialsStr.split(";").map((s) => s.trim()).filter(Boolean).map((pair) => {
+          const [mid, qtyStr] = pair.split(":").map((s) => (s ?? "").trim());
+          const qty = Number(qtyStr);
+          if (!mid || Number.isNaN(qty)) {
+            messages.push({ type: "err", text: `${name} 的 materials 欄位格式錯誤：「${pair}」，應為 材料名稱:數量` });
+            hasBlockingError = true;
+            return null;
+          }
+          return { id: mid, qty };
+        });
+        if (materials.some((m) => m === null)) return;
+
+        group.recipes.push({ craftTime, outputQty, materials });
+      });
+
+      if (hasBlockingError) {
+        messagesEl.innerHTML = messages.map((m) => `<div class="${m.type}">${m.text}</div>`).join("");
+        jsOutput.value = "";
+        return;
+      }
+
+      // 組成最終項目清單
+      const items = [];
+      for (const name of order) {
+        const group = groups.get(name);
+        const item = { id: name, name, category: group.category || "未分類" };
+        if (group.subcategory) item.subcategory = group.subcategory;
+        if (group.recipes.length > 0) item.recipes = group.recipes;
+        items.push(item);
+      }
+
+      // 材料欄位引用到、但沒有自己那一列的名稱，自動當成直接採集的原始材料
+      const known = new Set(items.map((i) => i.id));
+      const autoRaw = [];
+      for (const item of items) {
+        for (const recipe of item.recipes || []) {
+          for (const m of recipe.materials) {
+            if (!known.has(m.id)) {
+              known.add(m.id);
+              autoRaw.push({ id: m.id, name: m.id, category: "原料" });
+            }
+          }
+        }
+      }
+      items.push(...autoRaw);
+      if (autoRaw.length > 0) {
+        messages.push({ type: "ok", text: `自動視為原始材料（沒有另外那一列）：${autoRaw.map((i) => i.name).join("、")}` });
+      }
+
+      const header_comment =
+        "// 本檔案由 recipes.csv 透過 tools/convert.html 產生，請勿手動編輯。\n" +
+        "// 要更新配方請修改 recipes.csv 後重新轉換並覆蓋此檔。\n\n";
+      jsOutput.value = header_comment + "const ITEM_LIST = " + JSON.stringify(items, null, 2) + ";\n";
+
+      const multiCount = items.filter((i) => (i.recipes || []).length > 1).length;
+      messages.push({ type: "ok", text: `轉換完成，共 ${items.length} 個項目${multiCount > 0 ? `，其中 ${multiCount} 個有多種配方` : ""}。` });
+      messagesEl.innerHTML = messages.map((m) => `<div class="${m.type}">${m.text}</div>`).join("");
+    }
+
+    document.getElementById("convert-btn").addEventListener("click", convert);
+
+    document.getElementById("copy-btn").addEventListener("click", async () => {
+      if (!jsOutput.value) return;
+      await navigator.clipboard.writeText(jsOutput.value);
+      messagesEl.innerHTML += `<div class="ok">已複製到剪貼簿。</div>`;
+    });
+
+    document.getElementById("download-btn").addEventListener("click", () => {
+      if (!jsOutput.value) return;
+      const blob = new Blob([jsOutput.value], { type: "text/javascript" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "data.js";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
