@@ -128,6 +128,9 @@ function getEffectiveCraftTime(recipe) {
 
 const el = {
   premiumToggle: document.getElementById("premium-toggle"),
+  changelogToggle: document.getElementById("changelog-toggle"),
+  changelogPanel: document.getElementById("changelog-panel"),
+  changelogList: document.getElementById("changelog-list"),
   modeTabs: document.getElementById("mode-tabs"),
   categoryTabs: document.getElementById("category-tabs"),
   subcategoryTabs: document.getElementById("subcategory-tabs"),
@@ -584,6 +587,22 @@ function renderDetail() {
   });
 }
 
+function renderChangelog() {
+  el.changelogList.innerHTML = "";
+  for (const group of CHANGELOG) {
+    const dateLi = document.createElement("li");
+    dateLi.className = "changelog-date";
+    dateLi.textContent = group.date;
+    el.changelogList.appendChild(dateLi);
+    for (const text of group.items) {
+      const itemLi = document.createElement("li");
+      itemLi.className = "changelog-item";
+      itemLi.textContent = text;
+      el.changelogList.appendChild(itemLi);
+    }
+  }
+}
+
 function init() {
   el.premiumToggle.checked = state.premium;
   renderModeTabs();
@@ -591,6 +610,11 @@ function init() {
   renderSubcategoryTabs();
   renderItemList();
   renderDetail();
+  renderChangelog();
+
+  el.changelogToggle.addEventListener("click", () => {
+    el.changelogPanel.hidden = !el.changelogPanel.hidden;
+  });
 
   el.premiumToggle.addEventListener("change", () => {
     state.premium = el.premiumToggle.checked;

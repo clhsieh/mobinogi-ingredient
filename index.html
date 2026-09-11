@@ -105,9 +105,20 @@
       配方資料維護於 <code>data.js</code>，可自行編輯新增／修正。
       本站為靜態網頁，可直接開啟 <code>index.html</code> 或部署至 GitHub Pages。
     </p>
+    <p class="footer-links">
+      <a href="https://github.com/clhsieh/mobinogi-ingredient" target="_blank" rel="noopener">GitHub</a>
+      <span aria-hidden="true">·</span>
+      <button id="changelog-toggle" type="button" class="link-btn">更新紀錄</button>
+      <span aria-hidden="true">·</span>
+      本網站由 <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a> 協助生成
+    </p>
+    <div id="changelog-panel" class="changelog-panel" hidden>
+      <ul id="changelog-list"></ul>
+    </div>
   </footer>
 
   <script src="data.js"></script>
+  <script src="changelog.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
