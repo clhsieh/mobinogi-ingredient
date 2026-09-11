@@ -41,6 +41,11 @@ node tools/build.js
 `mobinogi-static`（`uv run python -m http.server`；Windows 上 `python3` 常常是壞掉
 的 Microsoft Store 替身，所以改用 `uv run python`）。
 
+## 更新 changelog
+
+網頁 footer 的「更新紀錄」面板內容在 `changelog.js`。**做完使用者看得到的功能/修正後，
+記得在 `CHANGELOG` 陣列最上面加一筆**（日期、簡短描述），不用等使用者提醒。
+
 ## Git 工作方式
 
 **`git commit` 和 `git push` 之前都一定要先讓使用者看過（commit 訊息／內容、或至少

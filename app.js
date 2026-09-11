@@ -366,7 +366,7 @@ function renderTreeNode(itemId, neededQty, depth) {
   details.open = depth < 2;
   const summary = document.createElement("summary");
   summary.innerHTML = `${item.name} × ${neededQty} ${multiNote}
-    <span class="tree-meta">（此分支需製作 ${branchActions} 次・約 ${formatSeconds(branchTime)}）</span>`;
+    <span class="tree-meta">（${recipe.processMethod ? `${recipe.processMethod}・` : ""}此分支需製作 ${branchActions} 次・約 ${formatSeconds(branchTime)}）</span>`;
   details.appendChild(summary);
 
   const ul = document.createElement("ul");
@@ -581,7 +581,7 @@ function renderDetail() {
     const perActionTime = getEffectiveCraftTime(recipe);
     const time = actions * perActionTime;
     li.innerHTML = `<strong>${idx + 1}. ${craftItem.name}</strong>
-      ── 製作 ${actions} 次（每次 ${formatSeconds(perActionTime)}）
+      ── ${recipe.processMethod ? `${recipe.processMethod}・` : ""}製作 ${actions} 次（每次 ${formatSeconds(perActionTime)}）
       ＝ ${formatSeconds(time)}`;
     el.craftStepsList.appendChild(li);
   });

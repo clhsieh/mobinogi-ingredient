@@ -260,6 +260,25 @@ const ITEM_LIST = [
     ]
   },
   {
+    "id": "單寧粉末",
+    "name": "單寧粉末",
+    "category": "材料",
+    "subcategory": "皮革",
+    "recipes": [
+      {
+        "processMethod": "分解",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "樹枝",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "皮革",
     "name": "皮革",
     "category": "材料",
@@ -4029,13 +4048,13 @@ const ITEM_LIST = [
     "category": "原料"
   },
   {
-    "id": "生皮",
-    "name": "生皮",
+    "id": "樹枝",
+    "name": "樹枝",
     "category": "原料"
   },
   {
-    "id": "單寧粉末",
-    "name": "單寧粉末",
+    "id": "生皮",
+    "name": "生皮",
     "category": "原料"
   },
   {
@@ -4471,11 +4490,6 @@ const ITEM_LIST = [
   {
     "id": "曠野的魔力石",
     "name": "曠野的魔力石",
-    "category": "原料"
-  },
-  {
-    "id": "樹枝",
-    "name": "樹枝",
     "category": "原料"
   },
   {
