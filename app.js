@@ -246,7 +246,12 @@ function renderModeTabs() {
       if (state.mode === "forward" && state.selectedId && !isCraftable(ITEMS[state.selectedId])) {
         state.selectedId = null;
       }
+      // 分類 tab 的內容依模式而不同（forward 只看得到可製作物的分類），切模式時重設避免停在對面模式才有的分類上
+      state.category = "全部";
+      state.subcategory = "全部";
       renderModeTabs();
+      renderCategoryTabs();
+      renderSubcategoryTabs();
       renderItemList();
       renderDetail();
     });
@@ -254,8 +259,14 @@ function renderModeTabs() {
   }
 }
 
+// forward 模式只列可製作物的分類（原始材料本來就不會出現在查配方清單裡，
+// 分類 tab 也不該列出「選了也一定沒東西」的分類）；reverse 模式列全部項目的分類。
+function categoryScopedItems() {
+  return state.mode === "forward" ? ITEM_LIST.filter(isCraftable) : ITEM_LIST;
+}
+
 function renderCategoryTabs() {
-  const categories = ["全部", ...new Set(ITEM_LIST.map((i) => i.category))];
+  const categories = ["全部", ...new Set(categoryScopedItems().map((i) => i.category))];
   el.categoryTabs.innerHTML = "";
   for (const cat of categories) {
     const btn = document.createElement("button");
@@ -278,7 +289,9 @@ function renderSubcategoryTabs() {
 
   const subcategories = [
     ...new Set(
-      ITEM_LIST.filter((i) => i.category === state.category && i.subcategory).map((i) => i.subcategory)
+      categoryScopedItems()
+        .filter((i) => i.category === state.category && i.subcategory)
+        .map((i) => i.subcategory)
     ),
   ];
   if (subcategories.length === 0) return;
