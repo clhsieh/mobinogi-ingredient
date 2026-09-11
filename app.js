@@ -54,6 +54,18 @@ const ITEMS = Object.fromEntries(ITEM_LIST.map((item) => [item.id, item]));
   }
 })();
 
+// 反查索引：materialId -> 用到它的每一筆配方 { userId, recipeIndex, qty, recipe }
+// 用來做「這個材料可以做出什麼」的反向搜尋，跟目前選的配方無關（掃描所有配方）。
+const USAGE_INDEX = new Map();
+for (const item of ITEM_LIST) {
+  (item.recipes || []).forEach((recipe, recipeIndex) => {
+    for (const m of recipe.materials) {
+      if (!USAGE_INDEX.has(m.id)) USAGE_INDEX.set(m.id, []);
+      USAGE_INDEX.get(m.id).push({ userId: item.id, recipeIndex, qty: m.qty, recipe });
+    }
+  });
+}
+
 // 預設開啟：data.js 裡的 craftTime 本來就是已經有奇幻生活會員（-50%）折扣後的時間，
 // 取消勾選才會 ×2 還原成沒有會員的一般時間。
 function loadPremium() {
@@ -85,6 +97,7 @@ function saveRecipeChoices() {
 }
 
 const state = {
+  mode: "forward", // "forward" = 選成品展開配方；"reverse" = 選材料查用途
   selectedId: null,
   qty: 1,
   search: "",
@@ -115,6 +128,7 @@ function getEffectiveCraftTime(recipe) {
 
 const el = {
   premiumToggle: document.getElementById("premium-toggle"),
+  modeTabs: document.getElementById("mode-tabs"),
   categoryTabs: document.getElementById("category-tabs"),
   subcategoryTabs: document.getElementById("subcategory-tabs"),
   itemList: document.getElementById("item-list"),
@@ -122,15 +136,22 @@ const el = {
   detailEmpty: document.getElementById("detail-empty"),
   detailContent: document.getElementById("detail-content"),
   detailTitle: document.getElementById("detail-title"),
+  qtyControl: document.getElementById("qty-control"),
   qtyInput: document.getElementById("qty-input"),
   qtyDecrease: document.getElementById("qty-decrease"),
   qtyIncrease: document.getElementById("qty-increase"),
+  forwardView: document.getElementById("forward-view"),
   totalTime: document.getElementById("total-time"),
   totalActions: document.getElementById("total-actions"),
   materialsTableBody: document.querySelector("#materials-table tbody"),
   craftStepsList: document.getElementById("craft-steps"),
   tree: document.getElementById("tree"),
   recipeChoices: document.getElementById("recipe-choices"),
+  reverseView: document.getElementById("reverse-view"),
+  reverseDirectCount: document.getElementById("reverse-direct-count"),
+  reverseFinalCount: document.getElementById("reverse-final-count"),
+  reverseFinalList: document.getElementById("reverse-final-list"),
+  reverseTree: document.getElementById("reverse-tree"),
 };
 
 function formatSeconds(totalSeconds) {
@@ -208,6 +229,31 @@ function computePlan(rootId, rootQty) {
   return { order, demand, actions, totalTime };
 }
 
+function renderModeTabs() {
+  const modes = [
+    { key: "forward", label: "查配方（選成品）" },
+    { key: "reverse", label: "查用途（選材料）" },
+  ];
+  el.modeTabs.innerHTML = "";
+  for (const m of modes) {
+    const btn = document.createElement("button");
+    btn.textContent = m.label;
+    btn.className = "tab" + (state.mode === m.key ? " active" : "");
+    btn.addEventListener("click", () => {
+      if (state.mode === m.key) return;
+      state.mode = m.key;
+      // forward 模式只能選可製作物；切過去時若目前選的是原始材料，先清掉避免顯示怪怪的結果
+      if (state.mode === "forward" && state.selectedId && !isCraftable(ITEMS[state.selectedId])) {
+        state.selectedId = null;
+      }
+      renderModeTabs();
+      renderItemList();
+      renderDetail();
+    });
+    el.modeTabs.appendChild(btn);
+  }
+}
+
 function renderCategoryTabs() {
   const categories = ["全部", ...new Set(ITEM_LIST.map((i) => i.category))];
   el.categoryTabs.innerHTML = "";
@@ -253,7 +299,7 @@ function renderSubcategoryTabs() {
 function renderItemList() {
   const q = state.search.trim().toLowerCase();
   const filtered = ITEM_LIST.filter((item) => {
-    if (!isCraftable(item)) return false; // 只列出可製作的項目讓使用者點選
+    if (state.mode === "forward" && !isCraftable(item)) return false; // 查配方模式只列出可製作的項目
     if (state.category !== "全部" && item.category !== state.category) return false;
     if (state.category !== "全部" && state.subcategory !== "全部" && item.subcategory !== state.subcategory) return false;
     if (q && !item.name.toLowerCase().includes(q) && !item.id.toLowerCase().includes(q)) return false;
@@ -264,7 +310,7 @@ function renderItemList() {
   if (filtered.length === 0) {
     const li = document.createElement("li");
     li.className = "empty-hint";
-    li.textContent = "找不到符合的製作物";
+    li.textContent = "找不到符合的項目";
     el.itemList.appendChild(li);
     return;
   }
@@ -365,6 +411,88 @@ function renderRecipeChoices(plan) {
   }
 }
 
+// 從某個材料開始，往上遞迴找出「沒有被任何配方使用」的終點（最終成品），並偵測循環。
+function collectFinalProducts(rootId) {
+  const result = new Set();
+
+  function dfs(id, ancestors) {
+    if (ancestors.has(id)) return; // 循環引用，停止
+    const uses = USAGE_INDEX.get(id) || [];
+    if (uses.length === 0) {
+      result.add(id);
+      return;
+    }
+    const next = new Set(ancestors);
+    next.add(id);
+    for (const use of uses) dfs(use.userId, next);
+  }
+
+  dfs(rootId, new Set());
+  return result;
+}
+
+// 渲染反查樹的一個節點：edge 代表「上一層材料被這個 use 用掉」，往上遞迴列出還有誰用到這個 use 的產物。
+function renderUsageNode(use, ancestors) {
+  const item = ITEMS[use.userId];
+  const li = document.createElement("li");
+  const recipeNote = item.recipes && item.recipes.length > 1 ? `・配方 ${use.recipeIndex + 1}/${item.recipes.length}` : "";
+  const meta = `（每次消耗 ${use.qty} 個${recipeNote}・該配方每次 ${formatSeconds(getEffectiveCraftTime(use.recipe))}・產出 ${use.recipe.outputQty || 1} 個）`;
+
+  if (ancestors.has(use.userId)) {
+    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・偵測到循環引用，停止展開</span></span>`;
+    return li;
+  }
+
+  const nextUses = USAGE_INDEX.get(use.userId) || [];
+  if (nextUses.length === 0) {
+    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・目前沒有其他配方用到它，可能是最終成品</span></span>`;
+    return li;
+  }
+
+  const details = document.createElement("details");
+  details.open = ancestors.size < 1;
+  const summary = document.createElement("summary");
+  summary.innerHTML = `${item.name} <span class="tree-meta">${meta}</span>`;
+  details.appendChild(summary);
+
+  const ul = document.createElement("ul");
+  const nextAncestors = new Set(ancestors);
+  nextAncestors.add(use.userId);
+  for (const nextUse of nextUses) {
+    ul.appendChild(renderUsageNode(nextUse, nextAncestors));
+  }
+  details.appendChild(ul);
+  li.appendChild(details);
+  return li;
+}
+
+function renderReverseDetail(item) {
+  el.qtyControl.hidden = true;
+  el.forwardView.hidden = true;
+  el.reverseView.hidden = false;
+
+  const directUses = USAGE_INDEX.get(item.id) || [];
+  const directUserIds = new Set(directUses.map((u) => u.userId));
+  el.reverseDirectCount.textContent = `${directUserIds.size} 種`;
+
+  el.reverseTree.innerHTML = "";
+  if (directUses.length === 0) {
+    el.reverseTree.innerHTML = `<li class="empty-hint">目前資料裡沒有任何配方用到「${item.name}」。</li>`;
+    el.reverseFinalCount.textContent = "-";
+    el.reverseFinalList.textContent = "";
+    return;
+  }
+
+  const ancestors = new Set([item.id]);
+  for (const use of directUses) {
+    el.reverseTree.appendChild(renderUsageNode(use, ancestors));
+  }
+
+  const finalProducts = collectFinalProducts(item.id);
+  el.reverseFinalCount.textContent = `${finalProducts.size} 種`;
+  el.reverseFinalList.textContent = `最終成品：${[...finalProducts].map((id) => ITEMS[id].name).join("、")}`;
+}
+
 function renderDetail() {
   const item = ITEMS[state.selectedId];
   if (!item) {
@@ -375,6 +503,15 @@ function renderDetail() {
   el.detailEmpty.hidden = true;
   el.detailContent.hidden = false;
   el.detailTitle.textContent = item.name;
+
+  if (state.mode === "reverse") {
+    renderReverseDetail(item);
+    return;
+  }
+
+  el.qtyControl.hidden = false;
+  el.forwardView.hidden = false;
+  el.reverseView.hidden = true;
   el.qtyInput.value = state.qty;
 
   let plan;
@@ -436,6 +573,7 @@ function renderDetail() {
 
 function init() {
   el.premiumToggle.checked = state.premium;
+  renderModeTabs();
   renderCategoryTabs();
   renderSubcategoryTabs();
   renderItemList();
