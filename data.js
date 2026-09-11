@@ -9,6 +9,7 @@ const ITEM_LIST = [
     "subcategory": "金屬",
     "recipes": [
       {
+        "processMethod": "金屬加工設備Lv.1",
         "craftTime": 30,
         "outputQty": 3,
         "materials": [
@@ -19,6 +20,7 @@ const ITEM_LIST = [
         ]
       },
       {
+        "processMethod": "金屬加工設備Lv.1",
         "craftTime": 30,
         "outputQty": 3,
         "materials": [
@@ -37,6 +39,7 @@ const ITEM_LIST = [
     "subcategory": "金屬",
     "recipes": [
       {
+        "processMethod": "金屬加工設備Lv.1",
         "craftTime": 300,
         "outputQty": 3,
         "materials": [
@@ -59,6 +62,7 @@ const ITEM_LIST = [
     "subcategory": "金屬",
     "recipes": [
       {
+        "processMethod": "金屬加工設備Lv.2",
         "craftTime": 4800,
         "outputQty": 3,
         "materials": [
@@ -85,6 +89,7 @@ const ITEM_LIST = [
     "subcategory": "金屬",
     "recipes": [
       {
+        "processMethod": "金屬加工設備Lv.3",
         "craftTime": 14400,
         "outputQty": 3,
         "materials": [
@@ -111,6 +116,7 @@ const ITEM_LIST = [
     "subcategory": "金屬",
     "recipes": [
       {
+        "processMethod": "金屬加工設備Lv.4",
         "craftTime": 18000,
         "outputQty": 3,
         "materials": [
@@ -137,6 +143,7 @@ const ITEM_LIST = [
     "subcategory": "木材",
     "recipes": [
       {
+        "processMethod": "木材加工設備Lv.1",
         "craftTime": 45,
         "outputQty": 3,
         "materials": [
@@ -155,6 +162,7 @@ const ITEM_LIST = [
     "subcategory": "木材",
     "recipes": [
       {
+        "processMethod": "木材加工設備Lv.1",
         "craftTime": 360,
         "outputQty": 3,
         "materials": [
@@ -177,6 +185,7 @@ const ITEM_LIST = [
     "subcategory": "木材",
     "recipes": [
       {
+        "processMethod": "木材加工設備Lv.2",
         "craftTime": 4800,
         "outputQty": 3,
         "materials": [
@@ -203,6 +212,7 @@ const ITEM_LIST = [
     "subcategory": "木材",
     "recipes": [
       {
+        "processMethod": "木材加工設備Lv.3",
         "craftTime": 14400,
         "outputQty": 3,
         "materials": [
@@ -229,6 +239,7 @@ const ITEM_LIST = [
     "subcategory": "木材",
     "recipes": [
       {
+        "processMethod": "木材加工設備Lv.4",
         "craftTime": 18000,
         "outputQty": 3,
         "materials": [
@@ -255,6 +266,7 @@ const ITEM_LIST = [
     "subcategory": "皮革",
     "recipes": [
       {
+        "processMethod": "皮革加工設備Lv.1",
         "craftTime": 30,
         "outputQty": 3,
         "materials": [
@@ -273,6 +285,7 @@ const ITEM_LIST = [
     "subcategory": "皮革",
     "recipes": [
       {
+        "processMethod": "皮革加工設備Lv.1",
         "craftTime": 300,
         "outputQty": 3,
         "materials": [
@@ -295,6 +308,7 @@ const ITEM_LIST = [
     "subcategory": "皮革",
     "recipes": [
       {
+        "processMethod": "皮革加工設備Lv.2",
         "craftTime": 4800,
         "outputQty": 3,
         "materials": [
@@ -321,6 +335,7 @@ const ITEM_LIST = [
     "subcategory": "皮革",
     "recipes": [
       {
+        "processMethod": "皮革加工設備Lv.3",
         "craftTime": 14400,
         "outputQty": 3,
         "materials": [
@@ -347,6 +362,7 @@ const ITEM_LIST = [
     "subcategory": "皮革",
     "recipes": [
       {
+        "processMethod": "皮革加工設備Lv.4",
         "craftTime": 18000,
         "outputQty": 3,
         "materials": [
@@ -373,6 +389,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.1",
         "craftTime": 45,
         "outputQty": 3,
         "materials": [
@@ -391,6 +408,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.1",
         "craftTime": 360,
         "outputQty": 3,
         "materials": [
@@ -413,6 +431,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.2",
         "craftTime": 4800,
         "outputQty": 3,
         "materials": [
@@ -439,6 +458,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.3",
         "craftTime": 14400,
         "outputQty": 3,
         "materials": [
@@ -465,6 +485,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.4",
         "craftTime": 18000,
         "outputQty": 3,
         "materials": [
@@ -491,6 +512,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.1",
         "craftTime": 90,
         "outputQty": 2,
         "materials": [
@@ -509,6 +531,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.2",
         "craftTime": 6600,
         "outputQty": 2,
         "materials": [
@@ -531,6 +554,7 @@ const ITEM_LIST = [
     "subcategory": "布料",
     "recipes": [
       {
+        "processMethod": "布料加工設備Lv.4",
         "craftTime": 21600,
         "outputQty": 2,
         "materials": [
@@ -557,6 +581,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.2",
         "craftTime": 300,
         "outputQty": 15,
         "materials": [
@@ -579,6 +604,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.1",
         "craftTime": 30,
         "outputQty": 5,
         "materials": [
@@ -601,6 +627,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.1",
         "craftTime": 150,
         "outputQty": 5,
         "materials": [
@@ -619,6 +646,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.2",
         "craftTime": 300,
         "outputQty": 15,
         "materials": [
@@ -641,6 +669,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.1",
         "craftTime": 300,
         "outputQty": 5,
         "materials": [
@@ -663,6 +692,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.2",
         "craftTime": 360,
         "outputQty": 15,
         "materials": [
@@ -685,6 +715,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.2",
         "craftTime": 1200,
         "outputQty": 5,
         "materials": [
@@ -707,6 +738,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 1500,
         "outputQty": 15,
         "materials": [
@@ -729,6 +761,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 3000,
         "outputQty": 5,
         "materials": [
@@ -751,6 +784,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.4",
         "craftTime": 1800,
         "outputQty": 15,
         "materials": [
@@ -773,6 +807,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.4",
         "craftTime": 5400,
         "outputQty": 5,
         "materials": [
@@ -795,6 +830,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 900,
         "outputQty": 5,
         "materials": [
@@ -813,6 +849,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.4",
         "craftTime": 1500,
         "outputQty": 5,
         "materials": [
@@ -831,6 +868,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.1",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -857,6 +895,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.2",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -883,6 +922,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -909,6 +949,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.4",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -935,6 +976,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 4650,
         "outputQty": 10,
         "materials": [
@@ -961,6 +1003,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 4650,
         "outputQty": 1,
         "materials": [
@@ -987,6 +1030,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 4650,
         "outputQty": 1,
         "materials": [
@@ -1013,6 +1057,7 @@ const ITEM_LIST = [
     "subcategory": "藥品",
     "recipes": [
       {
+        "processMethod": "藥品加工設備Lv.3",
         "craftTime": 4650,
         "outputQty": 1,
         "materials": [
@@ -1039,6 +1084,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.1",
         "craftTime": 45,
         "outputQty": 3,
         "materials": [
@@ -1061,6 +1107,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.2",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -1079,6 +1126,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.2",
         "craftTime": 600,
         "outputQty": 3,
         "materials": [
@@ -1101,6 +1149,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.3",
         "craftTime": 1500,
         "outputQty": 3,
         "materials": [
@@ -1127,6 +1176,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.3",
         "craftTime": 1500,
         "outputQty": 3,
         "materials": [
@@ -1153,6 +1203,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.4",
         "craftTime": 1200,
         "outputQty": 5,
         "materials": [
@@ -1175,6 +1226,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.4",
         "craftTime": 3300,
         "outputQty": 3,
         "materials": [
@@ -1205,6 +1257,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.4",
         "craftTime": 3300,
         "outputQty": 3,
         "materials": [
@@ -1235,6 +1288,7 @@ const ITEM_LIST = [
     "subcategory": "食材",
     "recipes": [
       {
+        "processMethod": "食材加工設備Lv.4",
         "craftTime": 9000,
         "outputQty": 1,
         "materials": [
@@ -1269,6 +1323,7 @@ const ITEM_LIST = [
     "subcategory": "簡便",
     "recipes": [
       {
+        "processMethod": "立即製作",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1291,6 +1346,7 @@ const ITEM_LIST = [
     "subcategory": "簡便",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1313,6 +1369,7 @@ const ITEM_LIST = [
     "subcategory": "簡便",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1335,6 +1392,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1361,6 +1419,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1387,6 +1446,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1417,6 +1477,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1447,6 +1508,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1477,6 +1539,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1507,6 +1570,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1541,6 +1605,7 @@ const ITEM_LIST = [
     "subcategory": "力量",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1575,6 +1640,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1601,6 +1667,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1627,6 +1694,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1657,6 +1725,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1683,6 +1752,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1713,6 +1783,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1743,6 +1814,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1777,6 +1849,7 @@ const ITEM_LIST = [
     "subcategory": "技巧",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1811,6 +1884,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1841,6 +1915,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1867,6 +1942,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1897,6 +1973,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1927,6 +2004,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1957,6 +2035,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -1987,6 +2066,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2021,6 +2101,7 @@ const ITEM_LIST = [
     "subcategory": "智力",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2055,6 +2136,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2093,6 +2175,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2131,6 +2214,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2169,6 +2253,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.3",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2207,6 +2292,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2245,6 +2331,7 @@ const ITEM_LIST = [
     "subcategory": "共享",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.4",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -2287,6 +2374,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2317,6 +2405,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2347,6 +2436,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2377,6 +2467,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2407,6 +2498,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2437,6 +2529,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2467,6 +2560,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2497,6 +2591,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2527,6 +2622,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2557,6 +2653,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2587,6 +2684,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2617,6 +2715,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2647,6 +2746,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2677,6 +2777,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -2707,6 +2808,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2741,6 +2843,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2775,6 +2878,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2809,6 +2913,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2843,6 +2948,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2877,6 +2983,7 @@ const ITEM_LIST = [
     "subcategory": "強化",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 2,
         "materials": [
@@ -2911,6 +3018,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "立即製作",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -2933,6 +3041,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "立即製作",
         "craftTime": 0,
         "outputQty": 10,
         "materials": [
@@ -2951,6 +3060,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -2973,6 +3083,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -2999,6 +3110,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3021,6 +3133,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3047,6 +3160,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3073,6 +3187,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3099,6 +3214,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3125,6 +3241,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3151,6 +3268,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3177,6 +3295,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 10,
         "materials": [
@@ -3195,6 +3314,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3217,6 +3337,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3243,6 +3364,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3269,6 +3391,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3295,6 +3418,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3321,6 +3445,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.2",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3347,6 +3472,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3373,6 +3499,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.3",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3395,6 +3522,7 @@ const ITEM_LIST = [
     "subcategory": "恢復",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.4",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3437,6 +3565,7 @@ const ITEM_LIST = [
     "subcategory": "染色劑",
     "recipes": [
       {
+        "processMethod": "藥品製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -3459,6 +3588,7 @@ const ITEM_LIST = [
     "subcategory": "其他食物",
     "recipes": [
       {
+        "processMethod": "食物製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -3485,6 +3615,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3515,6 +3646,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3537,6 +3669,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3559,6 +3692,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3581,6 +3715,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3603,6 +3738,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3625,6 +3761,7 @@ const ITEM_LIST = [
         ]
       },
       {
+        "processMethod": "多用途製作台Lv.4",
         "craftTime": 0,
         "outputQty": 5,
         "materials": [
@@ -3655,6 +3792,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3677,6 +3815,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3699,6 +3838,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3721,6 +3861,7 @@ const ITEM_LIST = [
     "subcategory": "魔法榴彈",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.3",
         "craftTime": 0,
         "outputQty": 3,
         "materials": [
@@ -3743,6 +3884,7 @@ const ITEM_LIST = [
     "subcategory": "一般材料",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.1",
         "craftTime": 0,
         "outputQty": 10,
         "materials": [
@@ -3761,6 +3903,7 @@ const ITEM_LIST = [
     "subcategory": "營火",
     "recipes": [
       {
+        "processMethod": "立即製作",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -3783,6 +3926,7 @@ const ITEM_LIST = [
     "subcategory": "營火",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.1",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [
@@ -3809,6 +3953,7 @@ const ITEM_LIST = [
     "subcategory": "營火",
     "recipes": [
       {
+        "processMethod": "多用途製作台Lv.2",
         "craftTime": 0,
         "outputQty": 1,
         "materials": [

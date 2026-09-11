@@ -87,6 +87,7 @@ function convert(csvText) {
     const name = get("name");
     const category = get("category");
     const subcategory = col.subcategory !== undefined ? get("subcategory") : "";
+    const processMethod = col.process_method !== undefined ? get("process_method") : "";
     const craftTimeStr = get("craft_time_sec");
     const outputQtyStr = get("output_qty");
     const materialsStr = get("materials");
@@ -126,11 +127,12 @@ function convert(csvText) {
     }
 
     let materialsInvalid = false;
-    const materials = materialsStr.split(";").map((s) => s.trim()).filter(Boolean).map((pair) => {
-      const [mid, qtyStr] = pair.split(":").map((s) => (s ?? "").trim());
-      const qty = Number(qtyStr);
+    const materials = materialsStr.split("/").map((s) => s.trim()).filter(Boolean).map((pair) => {
+      const match = pair.match(/^(.*?)(\d+)$/);
+      const mid = match ? match[1].trim() : "";
+      const qty = match ? Number(match[2]) : NaN;
       if (!mid || Number.isNaN(qty)) {
-        messages.push({ type: "err", text: `${name} 的 materials 欄位格式錯誤：「${pair}」，應為 材料名稱:數量` });
+        messages.push({ type: "err", text: `${name} 的 materials 欄位格式錯誤：「${pair}」，應為 材料名稱數量（例如 鐵錠3），用 / 分隔多個材料` });
         hasBlockingError = true;
         materialsInvalid = true;
         return null;
@@ -139,7 +141,12 @@ function convert(csvText) {
     });
     if (materialsInvalid) return;
 
-    group.recipes.push({ craftTime, outputQty, materials });
+    const recipe = {};
+    if (processMethod) recipe.processMethod = processMethod;
+    recipe.craftTime = craftTime;
+    recipe.outputQty = outputQty;
+    recipe.materials = materials;
+    group.recipes.push(recipe);
   });
 
   if (hasBlockingError) {

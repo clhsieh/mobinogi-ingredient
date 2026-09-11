@@ -65,21 +65,23 @@
   <div class="grid">
     <div class="panel">
       <h2>1. CSV 內容（可直接貼上／編輯）</h2>
-      <textarea id="csv-input" spellcheck="false" placeholder="name,category,subcategory,craft_time_sec,output_qty,materials"></textarea>
+      <textarea id="csv-input" spellcheck="false" placeholder="name,category,subcategory,process_method,craft_time_sec,output_qty,materials"></textarea>
       <p class="desc" style="margin-top:8px;">
         欄位說明（不需要另外想英文 id，直接用物品名稱就好）：<br />
         <code>name</code> 物品名稱，同時當作唯一代碼，其他配方用這個名稱引用<br />
         <code>category</code> 大分類（自由命名，會顯示在左側第一層篩選 tab）<br />
         <code>subcategory</code> 小分類（自由命名，選填；同一大分類下若有填，
         會多顯示第二層篩選 tab，留空就沒有第二層）<br />
+        <code>process_method</code> 加工方式／製作設備（自由命名，選填）<br />
         <code>craft_time_sec</code> 每次製作時間，可以直接寫秒數（例如 <code>100</code>），
         也可以寫 <code>1小時40分</code>、<code>90秒</code>、<code>2分30秒</code> 這種格式，
         會自動換算成秒數<br />
         <code>output_qty</code> 每次產出數量
-        —— 這兩欄「原始材料」留空即可<br />
-        <code>materials</code> 所需材料，格式 <code>材料名稱:數量</code>，多個材料用
-        <code>;</code> 分隔，例如 <code>鐵礦石:3;木材:1</code><br />
-        （物品名稱本身請避免包含 <code>:</code>、<code>;</code>、<code>,</code> 這幾個符號，以免跟格式衝突）
+        —— 這幾欄「原始材料」留空即可<br />
+        <code>materials</code> 所需材料，格式 <code>材料名稱數量</code>（名稱直接接數量，
+        中間不加符號），多個材料用 <code>/</code> 分隔，例如 <code>鐵礦石3/木材1</code>
+        （這個格式假設物品名稱最後一個字不會是數字）<br />
+        （物品名稱本身請避免包含 <code>/</code>、<code>,</code> 這幾個符號，以免跟格式衝突）
       </p>
       <p class="desc">
         <strong>不需要列出原始材料：</strong>只要某個材料名稱從來沒有出現在
@@ -110,13 +112,13 @@
   </footer>
 
   <script>
-    const SAMPLE_CSV = `name,category,subcategory,craft_time_sec,output_qty,materials
-鐵錠,材料,金屬,60,3,礦石:20
-鐵錠,材料,金屬,60,3,鐵礦石:10
-鋼錠,材料,金屬,600,3,鐵錠:3;煤炭:4
-合金鋼錠,材料,金屬,2小時40分,3,鋼錠:3;銅礦石:15;煤炭:8
-特殊鋼錠,材料,金屬,8小時,3,合金鋼錠:3;白銅礦石:20;煤炭:12
-銀合金錠,材料,金屬,10小時,3,特殊鋼錠:5;銀礦石:20;煤炭:16
+    const SAMPLE_CSV = `name,category,subcategory,process_method,craft_time_sec,output_qty,materials
+鐵錠,材料,金屬,金屬加工設備Lv.1,60,3,礦石20
+鐵錠,材料,金屬,金屬加工設備Lv.1,60,3,鐵礦石10
+鋼錠,材料,金屬,金屬加工設備Lv.1,600,3,鐵錠3/煤炭4
+合金鋼錠,材料,金屬,金屬加工設備Lv.1,2小時40分,3,鋼錠3/銅礦石15/煤炭8
+特殊鋼錠,材料,金屬,金屬加工設備Lv.1,8小時,3,合金鋼錠3/白銅礦石20/煤炭12
+銀合金錠,材料,金屬,金屬加工設備Lv.1,10小時,3,特殊鋼錠5/銀礦石20/煤炭16
 `;
 
     const csvInput = document.getElementById("csv-input");
@@ -213,6 +215,7 @@
         const name = get("name");
         const category = get("category");
         const subcategory = col.subcategory !== undefined ? get("subcategory") : "";
+        const processMethod = col.process_method !== undefined ? get("process_method") : "";
         const craftTimeStr = get("craft_time_sec");
         const outputQtyStr = get("output_qty");
         const materialsStr = get("materials");
@@ -251,11 +254,12 @@
           outputQty = n;
         }
 
-        const materials = materialsStr.split(";").map((s) => s.trim()).filter(Boolean).map((pair) => {
-          const [mid, qtyStr] = pair.split(":").map((s) => (s ?? "").trim());
-          const qty = Number(qtyStr);
+        const materials = materialsStr.split("/").map((s) => s.trim()).filter(Boolean).map((pair) => {
+          const match = pair.match(/^(.*?)(\d+)$/);
+          const mid = match ? match[1].trim() : "";
+          const qty = match ? Number(match[2]) : NaN;
           if (!mid || Number.isNaN(qty)) {
-            messages.push({ type: "err", text: `${name} 的 materials 欄位格式錯誤：「${pair}」，應為 材料名稱:數量` });
+            messages.push({ type: "err", text: `${name} 的 materials 欄位格式錯誤：「${pair}」，應為 材料名稱數量（例如 鐵錠3），用 / 分隔多個材料` });
             hasBlockingError = true;
             return null;
           }
@@ -263,7 +267,12 @@
         });
         if (materials.some((m) => m === null)) return;
 
-        group.recipes.push({ craftTime, outputQty, materials });
+        const recipe = {};
+        if (processMethod) recipe.processMethod = processMethod;
+        recipe.craftTime = craftTime;
+        recipe.outputQty = outputQty;
+        recipe.materials = materials;
+        group.recipes.push(recipe);
       });
 
       if (hasBlockingError) {

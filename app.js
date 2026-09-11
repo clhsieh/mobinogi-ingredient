@@ -413,7 +413,7 @@ function renderRecipeChoices(plan) {
       label.className = "recipe-option" + (idx === activeIdx ? " active" : "");
       label.innerHTML = `<input type="radio" name="recipe-${id}" ${idx === activeIdx ? "checked" : ""} />
         <span>${materialsSummary(recipe.materials)}
-          <span class="recipe-meta">（每次 ${formatSeconds(getEffectiveCraftTime(recipe))}・產出 ${recipe.outputQty || 1} 個）</span>
+          <span class="recipe-meta">（${recipe.processMethod ? `${recipe.processMethod}・` : ""}每次 ${formatSeconds(getEffectiveCraftTime(recipe))}・產出 ${recipe.outputQty || 1} 個）</span>
         </span>`;
       label.querySelector("input").addEventListener("change", () => {
         state.recipeChoice.set(id, idx);
