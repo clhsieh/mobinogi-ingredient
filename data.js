@@ -2281,6 +2281,1554 @@ const ITEM_LIST = [
     ]
   },
   {
+    "id": "暴擊秘藥",
+    "name": "暴擊秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "四葉草",
+            "qty": 10
+          },
+          {
+            "id": "咻咻蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "錢幣瓢蟲",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "絕招秘藥",
+    "name": "絕招秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "毅力草",
+            "qty": 10
+          },
+          {
+            "id": "咻咻蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "白花蝶",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "傷害減少秘藥",
+    "name": "傷害減少秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 10
+          },
+          {
+            "id": "咻咻蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "獨角仙",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "移動速度秘藥",
+    "name": "移動速度秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "箭花",
+            "qty": 10
+          },
+          {
+            "id": "咻咻蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "滴答螢火蟲",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級暴擊秘藥",
+    "name": "高級暴擊秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "暴擊秘藥",
+            "qty": 9
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "廢墟的魔力石",
+            "qty": 1
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級絕招秘藥",
+    "name": "高級絕招秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "絕招秘藥",
+            "qty": 9
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "廢墟的魔力石",
+            "qty": 1
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級傷害減少秘藥",
+    "name": "高級傷害減少秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "傷害減少秘藥",
+            "qty": 9
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "廢墟的魔力石",
+            "qty": 1
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級移動速度秘藥",
+    "name": "高級移動速度秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "移動速度秘藥",
+            "qty": 9
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "廢墟的魔力石",
+            "qty": 1
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "強擊強化秘藥",
+    "name": "強擊強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 10
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "獨角仙",
+            "qty": 10
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "連擊強化秘藥",
+    "name": "連擊強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "箭花",
+            "qty": 10
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "滴答螢火蟲",
+            "qty": 10
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "廣域強化秘藥",
+    "name": "廣域強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "魔力藥草",
+            "qty": 10
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 3
+          },
+          {
+            "id": "白花蝶",
+            "qty": 10
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級強擊強化秘藥",
+    "name": "高級強擊強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "強擊強化秘藥",
+            "qty": 5
+          },
+          {
+            "id": "增幅蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "礦山的魔力石",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級連擊強化秘藥",
+    "name": "高級連擊強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "連擊強化秘藥",
+            "qty": 5
+          },
+          {
+            "id": "增幅蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "礦山的魔力石",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級廣域強化秘藥",
+    "name": "高級廣域強化秘藥",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "廣域強化秘藥",
+            "qty": 5
+          },
+          {
+            "id": "增幅蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "礦山的魔力石",
+            "qty": 6
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "混合強化秘藥(山崩)",
+    "name": "混合強化秘藥(山崩)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "強擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "連擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 6
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 10
+          },
+          {
+            "id": "憤怒的碎片",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "混合強化秘藥(風暴)",
+    "name": "混合強化秘藥(風暴)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "強擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "廣域強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 6
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 10
+          },
+          {
+            "id": "遺忘的碎片",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "混合強化秘藥(怒濤)",
+    "name": "混合強化秘藥(怒濤)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "連擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "廣域強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 6
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 10
+          },
+          {
+            "id": "野性的碎片",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級混合強化秘藥(山崩)",
+    "name": "高級混合強化秘藥(山崩)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "高級強擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "高級連擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 10
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 25
+          },
+          {
+            "id": "憤怒的碎片",
+            "qty": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級混合強化秘藥(風暴)",
+    "name": "高級混合強化秘藥(風暴)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "高級強擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "高級廣域強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 10
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 25
+          },
+          {
+            "id": "遺忘的碎片",
+            "qty": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級混合強化秘藥(怒濤)",
+    "name": "高級混合強化秘藥(怒濤)",
+    "category": "道具",
+    "subcategory": "強化",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 2,
+        "materials": [
+          {
+            "id": "高級連擊強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "高級廣域強化秘藥",
+            "qty": 3
+          },
+          {
+            "id": "強化祕藥乳化劑",
+            "qty": 10
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 25
+          },
+          {
+            "id": "野性的碎片",
+            "qty": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "恢復藥水",
+    "name": "恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 2
+          },
+          {
+            "id": "新芽蘑菇",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "繃帶",
+    "name": "繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 10,
+        "materials": [
+          {
+            "id": "布料",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "自動恢復藥水",
+    "name": "自動恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "恢復藥水",
+            "qty": 5
+          },
+          {
+            "id": "分解的裝備零件",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級恢復藥水",
+    "name": "高級恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 6
+          },
+          {
+            "id": "新芽蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "咻咻蘑菇",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級自動恢復藥水",
+    "name": "高級自動恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級恢復藥水",
+            "qty": 5
+          },
+          {
+            "id": "分解的裝備零件",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "耐熱繃帶",
+    "name": "耐熱繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "繃帶",
+            "qty": 5
+          },
+          {
+            "id": "壯壯蘑菇粉末",
+            "qty": 3
+          },
+          {
+            "id": "火苗結晶",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "防寒繃帶",
+    "name": "防寒繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "繃帶",
+            "qty": 5
+          },
+          {
+            "id": "壯壯蘑菇粉末",
+            "qty": 3
+          },
+          {
+            "id": "冰霜結晶",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "絕緣繃帶",
+    "name": "絕緣繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "繃帶",
+            "qty": 5
+          },
+          {
+            "id": "壯壯蘑菇粉末",
+            "qty": 3
+          },
+          {
+            "id": "電氣結晶",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "祝福繃帶",
+    "name": "祝福繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "繃帶",
+            "qty": 5
+          },
+          {
+            "id": "壯壯蘑菇粉末",
+            "qty": 3
+          },
+          {
+            "id": "光輝結晶",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "封印繃帶",
+    "name": "封印繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "繃帶",
+            "qty": 5
+          },
+          {
+            "id": "壯壯蘑菇粉末",
+            "qty": 3
+          },
+          {
+            "id": "封印結晶",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "最高級恢復藥水",
+    "name": "最高級恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 12
+          },
+          {
+            "id": "淨淨蘑菇",
+            "qty": 6
+          },
+          {
+            "id": "躲躲花",
+            "qty": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級繃帶",
+    "name": "高級繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 10,
+        "materials": [
+          {
+            "id": "高級布料",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "最高自動恢復藥水",
+    "name": "最高自動恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "最高級恢復藥水",
+            "qty": 5
+          },
+          {
+            "id": "分解的裝備零件",
+            "qty": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級耐熱繃帶",
+    "name": "高級耐熱繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級繃帶",
+            "qty": 5
+          },
+          {
+            "id": "躲躲花粉末",
+            "qty": 6
+          },
+          {
+            "id": "火苗結晶",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級防寒繃帶",
+    "name": "高級防寒繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級繃帶",
+            "qty": 5
+          },
+          {
+            "id": "躲躲花粉末",
+            "qty": 6
+          },
+          {
+            "id": "冰霜結晶",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級絕緣繃帶",
+    "name": "高級絕緣繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級繃帶",
+            "qty": 5
+          },
+          {
+            "id": "躲躲花粉末",
+            "qty": 6
+          },
+          {
+            "id": "電氣結晶",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級祝福繃帶",
+    "name": "高級祝福繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級繃帶",
+            "qty": 5
+          },
+          {
+            "id": "躲躲花粉末",
+            "qty": 6
+          },
+          {
+            "id": "光輝結晶",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級封印繃帶",
+    "name": "高級封印繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級繃帶",
+            "qty": 5
+          },
+          {
+            "id": "躲躲花粉末",
+            "qty": 6
+          },
+          {
+            "id": "封印結晶",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "卓越恢復藥水",
+    "name": "卓越恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "血紅藥草",
+            "qty": 16
+          },
+          {
+            "id": "淨淨蘑菇汁液",
+            "qty": 5
+          },
+          {
+            "id": "生命的魔力石",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "卓越自動恢復藥水",
+    "name": "卓越自動恢復藥水",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "卓越恢復藥水",
+            "qty": 5
+          },
+          {
+            "id": "分解的裝備零件",
+            "qty": 120
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "卓越繃帶",
+    "name": "卓越繃帶",
+    "category": "道具",
+    "subcategory": "恢復",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "高級布料+",
+            "qty": 5
+          },
+          {
+            "id": "傷痕花粉末",
+            "qty": 6
+          },
+          {
+            "id": "火苗結晶",
+            "qty": 10
+          },
+          {
+            "id": "冰霜結晶",
+            "qty": 10
+          },
+          {
+            "id": "電氣結晶",
+            "qty": 10
+          },
+          {
+            "id": "光輝結晶",
+            "qty": 10
+          },
+          {
+            "id": "封印結晶",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "染色劑",
+    "name": "染色劑",
+    "category": "道具",
+    "subcategory": "染色劑",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "裝水的瓶子",
+            "qty": 3
+          },
+          {
+            "id": "染色劑基底",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "擠著吃的點心",
+    "name": "擠著吃的點心",
+    "category": "道具",
+    "subcategory": "其他食物",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "肉",
+            "qty": 3
+          },
+          {
+            "id": "藥草",
+            "qty": 1
+          },
+          {
+            "id": "裝水的瓶子",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "魔法榴彈部件",
+    "name": "魔法榴彈部件",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "分解的裝備零件",
+            "qty": 50
+          },
+          {
+            "id": "魔力藥草",
+            "qty": 10
+          },
+          {
+            "id": "峽谷的魔力石",
+            "qty": 1
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "火焰魔法榴彈",
+    "name": "火焰魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "火苗結晶",
+            "qty": 3
+          },
+          {
+            "id": "魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃電魔法榴彈",
+    "name": "閃電魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "電氣結晶",
+            "qty": 3
+          },
+          {
+            "id": "魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "風魔法榴彈",
+    "name": "風魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "凝聚的風",
+            "qty": 3
+          },
+          {
+            "id": "魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "酸蝕魔法榴彈",
+    "name": "酸蝕魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "毒囊",
+            "qty": 3
+          },
+          {
+            "id": "魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級魔法榴彈部件",
+    "name": "高級魔法榴彈部件",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "魔法榴彈部件",
+            "qty": 5
+          },
+          {
+            "id": "魔力起爆劑",
+            "qty": 25
+          },
+          {
+            "id": "峽谷的魔力石",
+            "qty": 24
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 100
+          }
+        ]
+      },
+      {
+        "craftTime": 0,
+        "outputQty": 5,
+        "materials": [
+          {
+            "id": "分解的裝備零件",
+            "qty": 150
+          },
+          {
+            "id": "魔力起爆劑",
+            "qty": 15
+          },
+          {
+            "id": "曠野的魔力石",
+            "qty": 25
+          },
+          {
+            "id": "煉金術碎屑",
+            "qty": 50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級火焰魔法榴彈",
+    "name": "高級火焰魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "火苗結晶",
+            "qty": 9
+          },
+          {
+            "id": "高級魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級閃電魔法榴彈",
+    "name": "高級閃電魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "電氣結晶",
+            "qty": 9
+          },
+          {
+            "id": "高級魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級風魔法榴彈",
+    "name": "高級風魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "凝聚的風",
+            "qty": 9
+          },
+          {
+            "id": "高級魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "高級酸蝕魔法榴彈",
+    "name": "高級酸蝕魔法榴彈",
+    "category": "道具",
+    "subcategory": "魔法榴彈",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 3,
+        "materials": [
+          {
+            "id": "毒囊",
+            "qty": 9
+          },
+          {
+            "id": "高級魔法榴彈部件",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "釘子",
+    "name": "釘子",
+    "category": "道具",
+    "subcategory": "一般材料",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 10,
+        "materials": [
+          {
+            "id": "鐵錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "營火套組",
+    "name": "營火套組",
+    "category": "道具",
+    "subcategory": "營火",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "樹枝",
+            "qty": 5
+          },
+          {
+            "id": "原木",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "熟練營火套組",
+    "name": "熟練營火套組",
+    "category": "道具",
+    "subcategory": "營火",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "樹枝",
+            "qty": 5
+          },
+          {
+            "id": "高級原木",
+            "qty": 4
+          },
+          {
+            "id": "石塊",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "專業營火套組",
+    "name": "專業營火套組",
+    "category": "道具",
+    "subcategory": "營火",
+    "recipes": [
+      {
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "樹枝",
+            "qty": 5
+          },
+          {
+            "id": "高級原木+",
+            "qty": 4
+          },
+          {
+            "id": "石塊",
+            "qty": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "礦石",
     "name": "礦石",
     "category": "原料"
@@ -2683,6 +4231,111 @@ const ITEM_LIST = [
   {
     "id": "厚實的馬鈴薯",
     "name": "厚實的馬鈴薯",
+    "category": "原料"
+  },
+  {
+    "id": "四葉草",
+    "name": "四葉草",
+    "category": "原料"
+  },
+  {
+    "id": "錢幣瓢蟲",
+    "name": "錢幣瓢蟲",
+    "category": "原料"
+  },
+  {
+    "id": "煉金術碎屑",
+    "name": "煉金術碎屑",
+    "category": "原料"
+  },
+  {
+    "id": "毅力草",
+    "name": "毅力草",
+    "category": "原料"
+  },
+  {
+    "id": "白花蝶",
+    "name": "白花蝶",
+    "category": "原料"
+  },
+  {
+    "id": "血紅藥草",
+    "name": "血紅藥草",
+    "category": "原料"
+  },
+  {
+    "id": "獨角仙",
+    "name": "獨角仙",
+    "category": "原料"
+  },
+  {
+    "id": "箭花",
+    "name": "箭花",
+    "category": "原料"
+  },
+  {
+    "id": "滴答螢火蟲",
+    "name": "滴答螢火蟲",
+    "category": "原料"
+  },
+  {
+    "id": "廢墟的魔力石",
+    "name": "廢墟的魔力石",
+    "category": "原料"
+  },
+  {
+    "id": "礦山的魔力石",
+    "name": "礦山的魔力石",
+    "category": "原料"
+  },
+  {
+    "id": "強化祕藥乳化劑",
+    "name": "強化祕藥乳化劑",
+    "category": "原料"
+  },
+  {
+    "id": "生命的魔力石",
+    "name": "生命的魔力石",
+    "category": "原料"
+  },
+  {
+    "id": "分解的裝備零件",
+    "name": "分解的裝備零件",
+    "category": "原料"
+  },
+  {
+    "id": "染色劑基底",
+    "name": "染色劑基底",
+    "category": "原料"
+  },
+  {
+    "id": "峽谷的魔力石",
+    "name": "峽谷的魔力石",
+    "category": "原料"
+  },
+  {
+    "id": "凝聚的風",
+    "name": "凝聚的風",
+    "category": "原料"
+  },
+  {
+    "id": "毒囊",
+    "name": "毒囊",
+    "category": "原料"
+  },
+  {
+    "id": "曠野的魔力石",
+    "name": "曠野的魔力石",
+    "category": "原料"
+  },
+  {
+    "id": "樹枝",
+    "name": "樹枝",
+    "category": "原料"
+  },
+  {
+    "id": "石塊",
+    "name": "石塊",
     "category": "原料"
   }
 ];
