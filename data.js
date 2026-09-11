@@ -3993,6 +3993,1332 @@ const ITEM_LIST = [
     ]
   },
   {
+    "id": "藥草鋤 (40-50)",
+    "name": "藥草鋤 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "鐮刀 (40-50)",
+    "name": "鐮刀 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "小鋤頭 (40-50)",
+    "name": "小鋤頭 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "羊毛剪 (40-50)",
+    "name": "羊毛剪 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "伐木斧 (40-50)",
+    "name": "伐木斧 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "鶴嘴鋤 (40-50)",
+    "name": "鶴嘴鋤 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "昆蟲捕捉網 (40-50)",
+    "name": "昆蟲捕捉網 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "木材+",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "釣竿 (40-50)",
+    "name": "釣竿 (40-50)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "木材+",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型藥草鋤 (90-100)",
+    "name": "改良型藥草鋤 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型鐮刀 (90-100)",
+    "name": "改良型鐮刀 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型小鋤頭 (90-100)",
+    "name": "改良型小鋤頭 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型羊毛剪 (90-100)",
+    "name": "改良型羊毛剪 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 3
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型伐木斧 (90-100)",
+    "name": "改良型伐木斧 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型鶴嘴鋤 (90-100)",
+    "name": "改良型鶴嘴鋤 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型昆蟲捕捉網 (90-100)",
+    "name": "改良型昆蟲捕捉網 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "高級木材",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "改良型釣竿 (90-100)",
+    "name": "改良型釣竿 (90-100)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "高級木材",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 6
+          },
+          {
+            "id": "改良道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧藥草鋤 (140-150)",
+    "name": "精巧藥草鋤 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 4
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧鐮刀 (140-150)",
+    "name": "精巧鐮刀 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 4
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧小鋤頭 (140-150)",
+    "name": "精巧小鋤頭 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 4
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧羊毛剪 (140-150)",
+    "name": "精巧羊毛剪 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 4
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧伐木斧 (140-150)",
+    "name": "精巧伐木斧 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 8
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧鶴嘴鋤 (140-150)",
+    "name": "精巧鶴嘴鋤 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "銀合金錠",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          },
+          {
+            "id": "釘子",
+            "qty": 8
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧昆蟲捕捉網 (140-150)",
+    "name": "精巧昆蟲捕捉網 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "最高級木材",
+            "qty": 1
+          },
+          {
+            "id": "高級木材+",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 8
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "精巧釣竿 (140-150)",
+    "name": "精巧釣竿 (140-150)",
+    "category": "工具",
+    "subcategory": "生活工具",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "最高級木材",
+            "qty": 1
+          },
+          {
+            "id": "高級木材+",
+            "qty": 3
+          },
+          {
+            "id": "釘子",
+            "qty": 8
+          },
+          {
+            "id": "精巧道具部件",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石項鍊 (39-50)",
+    "name": "橄欖石項鍊 (39-50)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石",
+            "qty": 1
+          },
+          {
+            "id": "鐵錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石項鍊 (50-65)",
+    "name": "淚石榴石項鍊 (50-65)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石",
+            "qty": 1
+          },
+          {
+            "id": "鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石項鍊 (65-80)",
+    "name": "藍尖晶石項鍊 (65-80)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石",
+            "qty": 1
+          },
+          {
+            "id": "鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石項鍊 (80-98)",
+    "name": "閃耀鋯石項鍊 (80-98)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石項鍊S (98-116)",
+    "name": "橄欖石項鍊S (98-116)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石項鍊S (116-138)",
+    "name": "淚石榴石項鍊S (116-138)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石項鍊S (138-160)",
+    "name": "藍尖晶石項鍊S (138-160)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石項鍊S (160-189)",
+    "name": "閃耀鋯石項鍊S (160-189)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石S",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石項鍊SS (189-219)",
+    "name": "橄欖石項鍊SS (189-219)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石項鍊SS (219-255、史詩)",
+    "name": "淚石榴石項鍊SS (219-255、史詩)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 4
+          },
+          {
+            "id": "抗魔石粉末",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石項鍊SS (255-292、傳說)",
+    "name": "藍尖晶石項鍊SS (255-292、傳說)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 4
+          },
+          {
+            "id": "抗魔石粉末",
+            "qty": 60
+          },
+          {
+            "id": "支配的圖紙(飾品)",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石項鍊SS (255-292、史詩)",
+    "name": "藍尖晶石項鍊SS (255-292、史詩)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石SS",
+            "qty": 1
+          },
+          {
+            "id": "銀合金錠",
+            "qty": 2
+          },
+          {
+            "id": "高級抗魔石粉末",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石項鍊SS (292-336、傳說)",
+    "name": "閃耀鋯石項鍊SS (292-336、傳說)",
+    "category": "飾品",
+    "subcategory": "項鍊",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石SS",
+            "qty": 1
+          },
+          {
+            "id": "銀合金錠",
+            "qty": 3
+          },
+          {
+            "id": "高級抗魔石粉末",
+            "qty": 60
+          },
+          {
+            "id": "高級支配的圖紙(飾品)",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石戒指 (35-45)",
+    "name": "橄欖石戒指 (35-45)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石",
+            "qty": 1
+          },
+          {
+            "id": "鐵錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石戒指 (45-58)",
+    "name": "淚石榴石戒指 (45-58)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石",
+            "qty": 1
+          },
+          {
+            "id": "鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石戒指 (58-72)",
+    "name": "藍尖晶石戒指 (58-72)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.1",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石",
+            "qty": 1
+          },
+          {
+            "id": "鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石戒指 (72-88)",
+    "name": "閃耀鋯石戒指 (72-88)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石戒指S (88-104)",
+    "name": "橄欖石戒指S (88-104)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石戒指S (104-124)",
+    "name": "淚石榴石戒指S (104-124)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石戒指S (124-144)",
+    "name": "藍尖晶石戒指S (124-144)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.2",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石S",
+            "qty": 1
+          },
+          {
+            "id": "合金鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石戒指S (144-170)",
+    "name": "閃耀鋯石戒指S (144-170)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石S",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "橄欖石戒指SS (170-196)",
+    "name": "橄欖石戒指SS (170-196)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢橄欖石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "淚石榴石戒指SS (196-229、史詩)",
+    "name": "淚石榴石戒指SS (196-229、史詩)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢石榴石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 4
+          },
+          {
+            "id": "抗魔石粉末",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石戒指SS (229-262、傳說)",
+    "name": "藍尖晶石戒指SS (229-262、傳說)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.3",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石SS",
+            "qty": 1
+          },
+          {
+            "id": "特殊鋼錠",
+            "qty": 4
+          },
+          {
+            "id": "抗魔石粉末",
+            "qty": 60
+          },
+          {
+            "id": "支配的圖紙(飾品)",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "藍尖晶石戒指SS (229-262、史詩)",
+    "name": "藍尖晶石戒指SS (229-262、史詩)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢藍尖晶石SS",
+            "qty": 1
+          },
+          {
+            "id": "銀合金錠",
+            "qty": 2
+          },
+          {
+            "id": "高級抗魔石粉末",
+            "qty": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "閃耀鋯石戒指SS (262-301、傳說)",
+    "name": "閃耀鋯石戒指SS (262-301、傳說)",
+    "category": "飾品",
+    "subcategory": "戒指",
+    "recipes": [
+      {
+        "processMethod": "多用途製作台Lv.4",
+        "craftTime": 0,
+        "outputQty": 1,
+        "materials": [
+          {
+            "id": "雕琢鋯石SS",
+            "qty": 1
+          },
+          {
+            "id": "銀合金錠",
+            "qty": 3
+          },
+          {
+            "id": "高級抗魔石粉末",
+            "qty": 60
+          },
+          {
+            "id": "高級支配的圖紙(飾品)",
+            "qty": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "礦石",
     "name": "礦石",
     "category": "原料"
@@ -4495,6 +5821,101 @@ const ITEM_LIST = [
   {
     "id": "石塊",
     "name": "石塊",
+    "category": "原料"
+  },
+  {
+    "id": "道具部件",
+    "name": "道具部件",
+    "category": "原料"
+  },
+  {
+    "id": "改良道具部件",
+    "name": "改良道具部件",
+    "category": "原料"
+  },
+  {
+    "id": "精巧道具部件",
+    "name": "精巧道具部件",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢橄欖石",
+    "name": "雕琢橄欖石",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢石榴石",
+    "name": "雕琢石榴石",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢藍尖晶石",
+    "name": "雕琢藍尖晶石",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢鋯石",
+    "name": "雕琢鋯石",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢橄欖石S",
+    "name": "雕琢橄欖石S",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢石榴石S",
+    "name": "雕琢石榴石S",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢藍尖晶石S",
+    "name": "雕琢藍尖晶石S",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢鋯石S",
+    "name": "雕琢鋯石S",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢橄欖石SS",
+    "name": "雕琢橄欖石SS",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢石榴石SS",
+    "name": "雕琢石榴石SS",
+    "category": "原料"
+  },
+  {
+    "id": "抗魔石粉末",
+    "name": "抗魔石粉末",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢藍尖晶石SS",
+    "name": "雕琢藍尖晶石SS",
+    "category": "原料"
+  },
+  {
+    "id": "支配的圖紙(飾品)",
+    "name": "支配的圖紙(飾品)",
+    "category": "原料"
+  },
+  {
+    "id": "高級抗魔石粉末",
+    "name": "高級抗魔石粉末",
+    "category": "原料"
+  },
+  {
+    "id": "雕琢鋯石SS",
+    "name": "雕琢鋯石SS",
+    "category": "原料"
+  },
+  {
+    "id": "高級支配的圖紙(飾品)",
+    "name": "高級支配的圖紙(飾品)",
     "category": "原料"
   }
 ];
