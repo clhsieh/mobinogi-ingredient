@@ -946,7 +946,7 @@ const ITEM_LIST = [
         "outputQty": 3,
         "materials": [
           {
-            "id": "白雙金龜子",
+            "id": "白霜金龜子",
             "qty": 3
           },
           {
@@ -5494,8 +5494,8 @@ const ITEM_LIST = [
     "category": "原料"
   },
   {
-    "id": "白雙金龜子",
-    "name": "白雙金龜子",
+    "id": "白霜金龜子",
+    "name": "白霜金龜子",
     "category": "原料"
   },
   {

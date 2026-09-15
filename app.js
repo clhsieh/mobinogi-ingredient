@@ -453,15 +453,16 @@ function renderUsageNode(use, ancestors) {
   const li = document.createElement("li");
   const recipeNote = item.recipes && item.recipes.length > 1 ? `・配方 ${use.recipeIndex + 1}/${item.recipes.length}` : "";
   const meta = `（每次消耗 ${use.qty} 個${recipeNote}・該配方每次 ${formatSeconds(getEffectiveCraftTime(use.recipe))}・產出 ${use.recipe.outputQty || 1} 個）`;
+  const recipeFull = `<div class="tree-recipe-full">${materialsSummary(use.recipe.materials)}</div>`;
 
   if (ancestors.has(use.userId)) {
-    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・偵測到循環引用，停止展開</span></span>`;
+    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・偵測到循環引用，停止展開</span></span>${recipeFull}`;
     return li;
   }
 
   const nextUses = USAGE_INDEX.get(use.userId) || [];
   if (nextUses.length === 0) {
-    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・目前沒有其他配方用到它，可能是最終成品</span></span>`;
+    li.innerHTML = `<span class="leaf">${item.name} <span class="tree-meta">${meta}・目前沒有其他配方用到它，可能是最終成品</span></span>${recipeFull}`;
     return li;
   }
 
@@ -470,6 +471,7 @@ function renderUsageNode(use, ancestors) {
   const summary = document.createElement("summary");
   summary.innerHTML = `${item.name} <span class="tree-meta">${meta}</span>`;
   details.appendChild(summary);
+  details.insertAdjacentHTML("beforeend", recipeFull);
 
   const ul = document.createElement("ul");
   const nextAncestors = new Set(ancestors);

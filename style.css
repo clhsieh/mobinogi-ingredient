@@ -295,6 +295,7 @@ body {
 }
 .tree-meta { color: var(--muted); font-size: 0.78rem; margin-left: 6px; }
 .tree .error { color: #c0392b; }
+.tree-recipe-full { color: var(--muted); font-size: 0.78rem; padding: 0 0 4px 4px; }
 
 .craft-steps {
   margin: 0 0 18px;
